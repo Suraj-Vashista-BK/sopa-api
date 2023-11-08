@@ -24,7 +24,7 @@
 
 package io.github.kwahome.sopa;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
 
@@ -140,7 +140,7 @@ public class StructLoggerConfigTests {
         StructLoggerConfig.clearContextSupplier(); // clear existing context
 
         // assert Map<String, Object> passed in is set
-        Map<String, Object> contextMap = new HashMap<>();
+        Map<String, Object> contextMap = new LinkedHashMap<>();
         contextMap.put("environment", "test");
         contextMap.put("host", "localhost");
         StructLoggerConfig.setContextSupplier(contextMap);
