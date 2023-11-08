@@ -24,7 +24,7 @@
 
 package io.github.kwahome.sopa;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -92,10 +92,10 @@ public class JSONRendererTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -143,10 +143,10 @@ public class JSONRendererTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -194,10 +194,10 @@ public class JSONRendererTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -245,10 +245,10 @@ public class JSONRendererTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -296,10 +296,10 @@ public class JSONRendererTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
