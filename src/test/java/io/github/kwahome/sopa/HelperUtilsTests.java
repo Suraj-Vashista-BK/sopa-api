@@ -24,7 +24,7 @@
 
 package io.github.kwahome.sopa;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -42,7 +42,7 @@ import io.github.kwahome.sopa.utils.Helpers;
  */
 public class HelperUtilsTests {
     private Object[] objectArray;
-    private Map<String, Object> map = new HashMap<>();
+    private Map<String, Object> map = new LinkedHashMap<>();
 
     @Before
     public void setUp() {
