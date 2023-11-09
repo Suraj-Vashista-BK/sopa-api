@@ -25,6 +25,7 @@
 package io.github.kwahome.sopa;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -112,10 +113,10 @@ public class StructLoggerKeyValueTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -159,10 +160,10 @@ public class StructLoggerKeyValueTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -206,10 +207,10 @@ public class StructLoggerKeyValueTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -253,10 +254,10 @@ public class StructLoggerKeyValueTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -300,10 +301,10 @@ public class StructLoggerKeyValueTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -363,7 +364,7 @@ public class StructLoggerKeyValueTests {
     @Test
     public void loggingHashMapKeyValuesTest() {
         String message = "Hello World!";
-        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map = new LinkedHashMap<>();
         map.put("key1", "value1");
         map.put("key2", "value2");
         logger.info(message, map);
@@ -378,10 +379,10 @@ public class StructLoggerKeyValueTests {
     @Test
     public void loggingMultipleHashMapKeyValuesTest() {
         String message = "Hello World!";
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key1", true);
         map2.put("key2", map1);
         logger.info(message, map1, map2);
@@ -399,10 +400,10 @@ public class StructLoggerKeyValueTests {
         // rather than a map object with key, values to be logged
         String message = "Hello World!";
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject loggableObject = new GenericLoggableObject(new Object[]{"map", map1});
@@ -542,10 +543,10 @@ public class StructLoggerKeyValueTests {
 
         // assert hashmap will work as well
         logger.newBind(); // reset bound context for easier assert
-        Map<String, Object> contextMap1 = new HashMap<>();
+        Map<String, Object> contextMap1 = new LinkedHashMap<>();
         contextMap1.put("key1", "value1");
         contextMap1.put("key2", "value2");
-        Map<String, Object> contextMap2 = new HashMap<>();
+        Map<String, Object> contextMap2 = new LinkedHashMap<>();
         contextMap2.put("key3", "value1");
         contextMap2.put("key4", "value1");
         LoggableObject contextObject = new GenericLoggableObject(new Object[]{"map", contextMap1});

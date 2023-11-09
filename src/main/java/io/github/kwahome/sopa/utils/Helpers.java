@@ -26,7 +26,7 @@ package io.github.kwahome.sopa.utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -51,7 +51,7 @@ public class Helpers {
      * @return Map<String, Object>
      */
     public static Map<String, Object> objectArrayToMap(Object[] objectArray) {
-        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map = new LinkedHashMap<>();
         for (int i = 0; i < objectArray.length; i = i + 2) {
             map.put((String) Arrays.asList(objectArray).get(i),
                     Arrays.asList(objectArray).get(i + 1));
