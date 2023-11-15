@@ -1,6 +1,6 @@
 package io.github.kwahome.sopa;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -68,10 +68,10 @@ public class YAMLRendererTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -82,8 +82,8 @@ public class YAMLRendererTests {
                 Helpers.mapToObjectArray(map1), object.loggableObject(), Helpers.mapToObjectArray(map2));
         expectedLoggingEvent = LoggingEvent.error(String.format(
                 "%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s", params[0], params[1], params[2], params[3],
-                params[6], params[7], params[8], params[9], "myMap", String.format("'%s'", map2), "message", message,
-                params[4], String.format("'%s'", params[5])));
+                params[6], params[7], params[8], params[9],params[4], String.format("'%s'", params[5]) , "message", message
+                , "myMap", String.format("'%s'", map2)));
         actualLoggingEvent = slf4jLogger.getLoggingEvents().get(0);
         Assert.assertThat(actualLoggingEvent, is(expectedLoggingEvent));
     }
@@ -119,10 +119,10 @@ public class YAMLRendererTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -133,8 +133,8 @@ public class YAMLRendererTests {
                 Helpers.mapToObjectArray(map1), object.loggableObject(), Helpers.mapToObjectArray(map2));
         expectedLoggingEvent = LoggingEvent.warn(String.format(
                 "%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s", params[0], params[1], params[2], params[3],
-                params[6], params[7], params[8], params[9], "myMap", String.format("'%s'", map2), "message", message,
-                params[4], String.format("'%s'", params[5])));
+                params[6], params[7], params[8], params[9],params[4], String.format("'%s'", params[5]) , "message", message
+                , "myMap", String.format("'%s'", map2)));
         actualLoggingEvent = slf4jLogger.getLoggingEvents().get(0);
         Assert.assertThat(actualLoggingEvent, is(expectedLoggingEvent));
     }
@@ -170,10 +170,10 @@ public class YAMLRendererTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -184,8 +184,8 @@ public class YAMLRendererTests {
                 Helpers.mapToObjectArray(map1), object.loggableObject(), Helpers.mapToObjectArray(map2));
         expectedLoggingEvent = LoggingEvent.info(String.format(
                 "%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s", params[0], params[1], params[2], params[3],
-                params[6], params[7], params[8], params[9], "myMap", String.format("'%s'", map2), "message", message,
-                params[4], String.format("'%s'", params[5])));
+                params[6], params[7], params[8], params[9],params[4], String.format("'%s'", params[5]) , "message", message
+                , "myMap", String.format("'%s'", map2)));
         actualLoggingEvent = slf4jLogger.getLoggingEvents().get(0);
         Assert.assertThat(actualLoggingEvent, is(expectedLoggingEvent));
     }
@@ -221,10 +221,10 @@ public class YAMLRendererTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -235,8 +235,8 @@ public class YAMLRendererTests {
                 Helpers.mapToObjectArray(map1), object.loggableObject(), Helpers.mapToObjectArray(map2));
         expectedLoggingEvent = LoggingEvent.debug(String.format(
                 "%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s", params[0], params[1], params[2], params[3],
-                params[6], params[7], params[8], params[9], "myMap", String.format("'%s'", map2), "message", message,
-                params[4], String.format("'%s'", params[5])));
+                params[6], params[7], params[8], params[9],params[4], String.format("'%s'", params[5]) , "message", message
+                , "myMap", String.format("'%s'", map2)));
         actualLoggingEvent = slf4jLogger.getLoggingEvents().get(0);
         Assert.assertThat(actualLoggingEvent, is(expectedLoggingEvent));
     }
@@ -272,10 +272,10 @@ public class YAMLRendererTests {
         slf4jLogger.clear(); // clear previous log events
 
         // assert hashmap will work as well
-        Map<String, Object> map1 = new HashMap<>();
+        Map<String, Object> map1 = new LinkedHashMap<>();
         map1.put("key1", "value1");
         map1.put("key2", "value2");
-        Map<String, Object> map2 = new HashMap<>();
+        Map<String, Object> map2 = new LinkedHashMap<>();
         map2.put("key3", "value1");
         map2.put("key4", "value2");
         LoggableObject object = new GenericLoggableObject(new Object[]{"map", map1});
@@ -286,8 +286,8 @@ public class YAMLRendererTests {
                 Helpers.mapToObjectArray(map1), object.loggableObject(), Helpers.mapToObjectArray(map2));
         expectedLoggingEvent = LoggingEvent.trace(String.format(
                 "%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s", params[0], params[1], params[2], params[3],
-                params[6], params[7], params[8], params[9], "myMap", String.format("'%s'", map2), "message", message,
-                params[4], String.format("'%s'", params[5])));
+                params[6], params[7], params[8], params[9],params[4], String.format("'%s'", params[5]) , "message", message
+                , "myMap", String.format("'%s'", map2)));
         actualLoggingEvent = slf4jLogger.getLoggingEvents().get(0);
         Assert.assertThat(actualLoggingEvent, is(expectedLoggingEvent));
     }
