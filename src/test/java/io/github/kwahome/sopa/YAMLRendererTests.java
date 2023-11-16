@@ -82,8 +82,8 @@ public class YAMLRendererTests {
                 Helpers.mapToObjectArray(map1), object.loggableObject(), Helpers.mapToObjectArray(map2));
         expectedLoggingEvent = LoggingEvent.error(String.format(
                 "%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s", params[0], params[1], params[2], params[3],
-                params[6], params[7], params[8], params[9],params[4], String.format("'%s'", params[5]) , "message", message
-                , "myMap", String.format("'%s'", map2)));
+                params[6], params[7], params[8], params[9], params[4], String.format("'%s'", params[5]) , "message",
+                message, "myMap", String.format("'%s'", map2)));
         actualLoggingEvent = slf4jLogger.getLoggingEvents().get(0);
         Assert.assertThat(actualLoggingEvent, is(expectedLoggingEvent));
     }
@@ -133,8 +133,8 @@ public class YAMLRendererTests {
                 Helpers.mapToObjectArray(map1), object.loggableObject(), Helpers.mapToObjectArray(map2));
         expectedLoggingEvent = LoggingEvent.warn(String.format(
                 "%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s", params[0], params[1], params[2], params[3],
-                params[6], params[7], params[8], params[9],params[4], String.format("'%s'", params[5]) , "message", message
-                , "myMap", String.format("'%s'", map2)));
+                params[6], params[7], params[8], params[9], params[4], String.format("'%s'", params[5]) , "message",
+                message, "myMap", String.format("'%s'", map2)));
         actualLoggingEvent = slf4jLogger.getLoggingEvents().get(0);
         Assert.assertThat(actualLoggingEvent, is(expectedLoggingEvent));
     }
@@ -184,8 +184,8 @@ public class YAMLRendererTests {
                 Helpers.mapToObjectArray(map1), object.loggableObject(), Helpers.mapToObjectArray(map2));
         expectedLoggingEvent = LoggingEvent.info(String.format(
                 "%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s", params[0], params[1], params[2], params[3],
-                params[6], params[7], params[8], params[9],params[4], String.format("'%s'", params[5]) , "message", message
-                , "myMap", String.format("'%s'", map2)));
+                params[6], params[7], params[8], params[9], params[4], String.format("'%s'", params[5]) , "message",
+                message, "myMap", String.format("'%s'", map2)));
         actualLoggingEvent = slf4jLogger.getLoggingEvents().get(0);
         Assert.assertThat(actualLoggingEvent, is(expectedLoggingEvent));
     }
@@ -235,8 +235,8 @@ public class YAMLRendererTests {
                 Helpers.mapToObjectArray(map1), object.loggableObject(), Helpers.mapToObjectArray(map2));
         expectedLoggingEvent = LoggingEvent.debug(String.format(
                 "%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s", params[0], params[1], params[2], params[3],
-                params[6], params[7], params[8], params[9],params[4], String.format("'%s'", params[5]) , "message", message
-                , "myMap", String.format("'%s'", map2)));
+                params[6], params[7], params[8], params[9], params[4], String.format("'%s'", params[5]) , "message",
+                message, "myMap", String.format("'%s'", map2)));
         actualLoggingEvent = slf4jLogger.getLoggingEvents().get(0);
         Assert.assertThat(actualLoggingEvent, is(expectedLoggingEvent));
     }
@@ -286,8 +286,8 @@ public class YAMLRendererTests {
                 Helpers.mapToObjectArray(map1), object.loggableObject(), Helpers.mapToObjectArray(map2));
         expectedLoggingEvent = LoggingEvent.trace(String.format(
                 "%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s\n%s: %s", params[0], params[1], params[2], params[3],
-                params[6], params[7], params[8], params[9],params[4], String.format("'%s'", params[5]) , "message", message
-                , "myMap", String.format("'%s'", map2)));
+                params[6], params[7], params[8], params[9], params[4], String.format("'%s'", params[5]) , "message",
+                message, "myMap", String.format("'%s'", map2)));
         actualLoggingEvent = slf4jLogger.getLoggingEvents().get(0);
         Assert.assertThat(actualLoggingEvent, is(expectedLoggingEvent));
     }
