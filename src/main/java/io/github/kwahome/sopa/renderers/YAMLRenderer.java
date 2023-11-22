@@ -26,6 +26,7 @@ package io.github.kwahome.sopa.renderers;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 import org.slf4j.Logger;
 import org.yaml.snakeyaml.DumperOptions;
@@ -93,6 +94,7 @@ public class YAMLRenderer implements LogRenderer<Map<String, String>> {
 
     @Override
     public final String end(Logger logger, Map<String, String> builderObject) {
-        return YAML.get().dump(builderObject).trim();
+        TreeMap<String, String> treeMap = new TreeMap<>(builderObject);
+        return YAML.get().dump(treeMap).trim();
     }
 }
